@@ -20,6 +20,14 @@
         <i class="tape"></i>
       </span>
     </div>
-  </div> 
+  </div>
+  <!-- rotate on mousemove  -->
+  <script>
+    let box = document.getElementById('box');
+    window.onmousemove = function(e) {
+      console.log(e.clientX);
+      box.style.transform = `rotateX(-30deg) rotateY(${e.clientX}deg)`;
+    }
+  </script>
 </body>
 </html>
